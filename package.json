@@ -1,0 +1,21 @@
+{
+  "name": "checkly_poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SolutiaThomasR/checkly_poc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SolutiaThomasR/checkly_poc/issues"
+  },
+  "homepage": "https://github.com/SolutiaThomasR/checkly_poc#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.25.0"
+  }
+}
