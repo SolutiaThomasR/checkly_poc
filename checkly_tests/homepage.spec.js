@@ -1,30 +1,20 @@
-/**
- * This is a basic Playwright script to get you started!
- * To learn more about Browser checks and Playwright visit: https://www.checklyhq.com/docs/browser-checks
- */
+const { test, expect } = require('@playwright/test');
 
-// Create a Chromium browser
-const { chromium } = require('playwright')
+test('test homepage contact', async ({ page }) => {
 
-// Checkly supports top level await, but we wrap your code in an async function so you can run it locally too.
-async function run () {
-  const browser = await chromium.launch()
-  const page = await browser.newPage()
+  // Go to https://www.solutiaconsulting.com/
+  await page.goto('https://www.solutiaconsulting.com/');
 
-  // We visit the page. This waits for the "load" event by default.
-  const response = await page.goto('https://google.com')
+  // Click text=Let's Talk
+  await page.locator('text=Let\'s Talk').click();
 
-  // If the page doesn't return a successful response code, we fail the check.
-  if (response.status() > 399) {
-    throw new Error(`Failed with response code ${response.status()}`)
-  }
+  // Click input[name="name"]
+  await page.locator('input[name="name"]').click();
 
-  // We snap a screenshot.
-  await page.screenshot({ path: 'screenshot.jpg' })
+  // Fill input[name="name"]
+  await page.locator('input[name="name"]').fill('Thomas Reither');
 
-  // We close the page to clean up and gather performance metrics.
-  await page.close()
-  await browser.close()
-}
+  // Click text=Contact UsHow can we help you?Area of Inquiry *​Area of InquiryName *Name *Email >> svg[role="img"] path
+  await page.locator('text=Contact UsHow can we help you?Area of Inquiry *​Area of InquiryName *Name *Email >> svg[role="img"] path').click();
 
-run()
+});
