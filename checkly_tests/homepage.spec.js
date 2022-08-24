@@ -14,7 +14,4 @@ test('test homepage contact', async ({ page }) => {
   // Fill input[name="name"]
   await page.locator('input[name="name"]').fill('Thomas Reither');
 
-  // Click text=Contact UsHow can we help you?Area of Inquiry *​Area of InquiryName *Name *Email >> svg[role="img"] path
-  await page.locator('text=Contact UsHow can we help you?Area of Inquiry *​Area of InquiryName *Name *Email >> svg[role="img"] path').click();
-
 });
