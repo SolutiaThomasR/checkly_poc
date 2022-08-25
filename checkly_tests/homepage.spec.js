@@ -1,5 +1,8 @@
 const { test, expect } = require('@playwright/test');
 
+console.log("Logging Environment Variable: ");
+console.log(process.env.environment);
+
 test('test homepage contact', async ({ page }) => {
 
   // Go to https://www.solutiaconsulting.com/
