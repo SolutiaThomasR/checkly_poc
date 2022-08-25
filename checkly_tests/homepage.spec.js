@@ -9,7 +9,7 @@ test('test homepage contact', async ({ page }) => {
   await page.locator('text=Let\'s Talk').click();
 
   // Click input[name="name"]
-  await page.locator('inkput[name="name"]').click();
+  await page.locator('input[name="name"]').click();
 
   // Fill input[name="name"]
   await page.locator('input[name="name"]').fill('Thomas Reither');
